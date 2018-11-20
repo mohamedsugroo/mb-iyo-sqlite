@@ -1,0 +1,42 @@
+<section class="postinfo">
+	<div class="row">
+		<div class="col">
+
+			<div class="avatar" style="background-image: url(<%= @post.new_author_avatars[2] %>)"></div>
+			<div class="author_site">
+				<div>
+					<strong>
+						<%= @post.author_name %>
+					</strong>
+				</div>
+				<a href="<%= @post.source_link %>"><%= @post.sites.name %></a>
+			</div>
+
+		</div>
+
+		<div class="col align-right">
+			<div class="share">
+				<div class="row">
+					<div class="col align-center facebook-color">
+						<i class="fab fa-facebook-f"></i>  <br>
+						<small>Facebook</small>
+					</div>
+					<div class="col align-center google-color">
+						<i class="fab fa-google-plus-g"></i> <br> 
+						<small>Google</small>
+					</div>
+					<div class="col align-center twitter-color">
+						<i class="fab fa-twitter"></i> <br> 
+						<small>Twitter</small>
+					</div>
+					<div class="col align-center reddit-color">
+						<i class="fab fa-reddit-alien"></i> <br> 
+						<small>Reddit</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+</section>

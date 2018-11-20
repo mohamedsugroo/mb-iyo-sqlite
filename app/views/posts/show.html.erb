@@ -1,0 +1,47 @@
+<article>
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-8">
+        <div class="header">
+          
+          <% @post.catagories.each do |cat| %>
+            <label class="category"><%= cat %></label>
+          <% end %>
+          
+          <%#= image_tag @post.featuredmedia %>
+          <h1 class="title"><%= @post.title.html_safe %></h1>
+          <p>Posted | <%= time_ago_in_words(@post.created_at) %> ago.</p>
+          <!-- <hr> -->
+          <%= render 'posts/headerinfo' %>
+          <hr>
+        </div>
+        <div class="article_content">
+            <div class="content">
+              <%= @post.content.html_safe %>
+            </div>
+
+            <div>
+              <strong>Source | </strong>
+              <%= @post.sites.name %>
+            </div>
+
+            <%= render 'posts/informed' %>
+
+            <%= link_to 'Edit', edit_post_path(@post) %> |
+            <%= link_to 'Back', posts_path %>
+
+          </div>
+      </div>
+
+      <div class="col">
+        adverts
+      </div>
+    </div>
+
+    
+  </div>
+</article>
+<div class="related_articles">
+  <%= render 'posts/related' %>
+</div>

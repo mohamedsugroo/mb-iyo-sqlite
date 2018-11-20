@@ -1,0 +1,61 @@
+<div class="blackedout">
+	<div class="container">
+		<h5>Related posts</h5>
+		<div class="row">
+
+			<% if @relatedposts.size < 1 %>
+
+				<% @relatedpostsfix.each do |post| %>
+						<div class="col cards">
+							<a href="<%= post_path(post) %>">
+								<div class="featured_image" style="background-image: url(<%= post.featuredmedia %>)">
+									
+								</div>
+								<div class="textwithpadding">
+								
+								<h3 class="title"><%= post.title.html_safe %> </h3>
+								<p>
+									<strong>
+								<%= post.category %>
+
+										<%= post.sites.name %>
+									</strong> <br>
+									<small class="date">
+										<%= post.created_at.strftime("%d %B %Y") %>
+									</small>
+								</p>
+								</div>
+							</a>
+						</div>
+					<% end %>
+
+			<% else %>
+				<% @relatedposts.each do |post| %>
+					<div class="col cards">
+						<a href="<%= post_path(post) %>">
+							<label class="category">
+								<%= post.catagories.last %>
+							</label>
+							<div class="featured_image" style="background-image: url(<%= post.featuredmedia %>)">
+								
+							</div>
+							<div class="textwithpadding">
+							
+							<h3 class="title"><%= post.title.html_safe %> </h3>
+							<p>
+								<strong>
+									<%= post.sites.name %>
+								</strong> <br>
+								<small class="date">
+									<%= post.created_at.strftime("%d %B %Y") %>
+								</small>
+							</p>
+							</div>
+						</a>
+					</div>
+				<% end %>
+			<% end %>
+			
+		</div>
+	</div>
+</div>
