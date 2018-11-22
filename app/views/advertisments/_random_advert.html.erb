@@ -1,3 +1,6 @@
 <% randadvert.each do |ad| %>
-	<%= ad.title %>
+	<div class="advertisment">
+		<%= ad.title %>
+	    <%- advertisment ad.code_js.html_safe %>
+	</div>
 <% end %>
