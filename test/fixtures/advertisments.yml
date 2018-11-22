@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  comany_name: MyString
+  start_date: 2018-11-22
+  end_date: 2018-11-22
+  code_html: MyText
+  code_css: MyText
+  code_js: MyText
+
+two:
+  title: MyString
+  comany_name: MyString
+  start_date: 2018-11-22
+  end_date: 2018-11-22
+  code_html: MyText
+  code_css: MyText
+  code_js: MyText

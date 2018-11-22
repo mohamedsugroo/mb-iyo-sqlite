@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @advertisment.title %>
+</p>
+
+<p>
+  <strong>Comany name:</strong>
+  <%= @advertisment.comany_name %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @advertisment.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @advertisment.end_date %>
+</p>
+
+
+<div class="advertisment">
+  <%= @advertisment.code_html.html_safe %>
+  <style>
+    <%= @advertisment.code_css %>
+  </style>
+  <!-- <script type="text/javascript"> -->
+    <%= extraCode = @advertisment.code_js %>
+    <%- advertisment @advertisment.code_js.html_safe %>
+  <!-- </script> -->
+  
+</div>
+  
+
+<%= link_to 'Edit', edit_advertisment_path(@advertisment) %> |
+<%= link_to 'Back', advertisments_path %>

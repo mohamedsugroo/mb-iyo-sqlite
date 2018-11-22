@@ -1,0 +1,52 @@
+<%= form_with(model: advertisment, local: true) do |form| %>
+  <% if advertisment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(advertisment.errors.count, "error") %> prohibited this advertisment from being saved:</h2>
+
+      <ul>
+      <% advertisment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comany_name %>
+    <%= form.text_field :comany_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.date_select :start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.date_select :end_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :code_html %>
+    <%= form.text_area :code_html %>
+  </div>
+
+  <div class="field">
+    <%= form.label :code_css %>
+    <%= form.text_area :code_css %>
+  </div>
+
+  <div class="field">
+    <%= form.label :code_js %>
+    <%= form.text_area :code_js %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

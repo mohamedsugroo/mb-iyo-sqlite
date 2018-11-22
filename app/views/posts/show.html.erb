@@ -11,7 +11,7 @@
           
           <%#= image_tag @post.featuredmedia %>
           <h1 class="title"><%= @post.title.html_safe %></h1>
-          <p>Posted | <%= time_ago_in_words(@post.created_at) %> ago.</p>
+          <p>Published | <%= time_ago_in_words(@post.created_at) %> ago</p>
           <!-- <hr> -->
           <%= render 'posts/headerinfo' %>
           <hr>
@@ -35,7 +35,7 @@
       </div>
 
       <div class="col">
-        adverts
+        <%= render 'advertisments/random_advert' %>
       </div>
     </div>
 
