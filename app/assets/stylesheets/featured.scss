@@ -4,6 +4,16 @@ $primary-color: #ff9f43;
 	margin-top: -20px;
 	height: 600px;
 
+	a {
+		text-decoration: none;
+		color: inherit;
+
+		&:hover {
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+
 	.row {
 		height: 100%;
 		padding: 0;

@@ -36,10 +36,25 @@ $primary-color: #ff9f43;
 	}
 
 	.source {
-		background: $primary-color;
-		padding: 6px;
+		// background: $primary-color;
+		padding: 12px;
 		border-radius: 3px;
-		color: white;
+		// color: white;
+
+		.author {
+			padding-left: 10px;
+		}
+
+		.avatar {
+			width: 30px;
+			height: 30px;
+			float: left;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 100%;
+			background-color: #e2e2e2;
+		}
 	}
 
 }

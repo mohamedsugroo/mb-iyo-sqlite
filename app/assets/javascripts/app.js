@@ -1,6 +1,5 @@
 let app = angular.module('mangaApp', [])
   
-
 app.controller('searchController', function($scope, $http) {
 
 	$scope.posts = []
