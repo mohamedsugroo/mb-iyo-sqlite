@@ -1,2 +1,53 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="featured">
+	<div class="row">
+	<% @posts.each do |featured| %>
+		<div class="col" style="background-image: url(<%= featured.featuredmedia %>)">
+			<div class="coverFull">
+				<div class="info">
+					<label class="category"><%= featured.catagories[0] %></label>
+					<h4 class="title"><%= truncate(featured.title.html_safe, length: 80 , omission: "..." , escape: false) %></h4>
+					<div>
+						<div class="avatar" style="background-image: url(<%= featured.new_author_avatars[0] %>)"></div>
+						<label class="source"><%= featured.sites_json[0] %></label>
+					</div>
+
+				</div>
+				
+			</div>
+		</div>
+	<% end %>
+	</div>
+</div>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="posts_list">
+				<% @lists.each do |article| %>
+					<a href="<%= post_path(article)%>">
+						<div class="row list_item">
+							<div class="col">
+								<div class="post_image" style="background-image: url(<%= article.featuredmedia  %>)">
+								</div>
+							</div>
+							<div class="col">
+								<h2 class="title"><%= article.title.html_safe %></h2>
+								<label class="source"><%= article.sites_json[0] %></label> <%= article.time_ago %>
+							</div>
+							
+						</div>
+					</a>
+				<% end %>
+				<%= will_paginate @lists, :page_links => false %>
+
+			</div>
+		</div>
+		<div class="col-md-4">
+			 <%= render 'advertisments/random_advert' %>
+		</div>
+	</div>
+
+
+	
+</div>

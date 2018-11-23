@@ -10,7 +10,18 @@
 				</h1>
 			</div>
 			<div class="col text-center nav-center">
-				<input type="search" class="searchbox" placeholder="Search ...">
+				<input type="search" class="searchbox" placeholder="Search ..." ng-model="searchq">
+				<div class="searchRes" ng-controller="searchController" ng-show="searchq.length > 0">
+					<ul>
+						<li ng-repeat="post in posts | limitTo : 3| filter : searchq  ">
+							<a href="{{post.url_html}}">
+							{{ post.title }} <br>
+							<span class="badge badge-light">{{ post.sites_json[0] }}</span>
+							<span class="badge badge-light">{{ post.time_ago }}</span>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div class="col text-right">
 				<button class="btn btn-primary btn-signin">Sign in</button>

@@ -1,5 +1,5 @@
-document.addEventListener("turbolinks:load", function() {
-
+// document.addEventListener("turbolinks:load", function() {
+  
   let img = document.querySelectorAll('img');
   let imageLength = img.length;
 
@@ -29,7 +29,7 @@ document.addEventListener("turbolinks:load", function() {
 
     
 
-});
+// });
 
 
 

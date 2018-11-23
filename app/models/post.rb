@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-
+	include ActionView::Helpers::DateHelper
 	def new_tags 
 		JSON.parse(self.tags)
 	end
@@ -20,5 +20,9 @@ class Post < ApplicationRecord
 		site = Site.where(id: self.site_id).first
 
 		return [site.name, site.photo_id]
+	end
+
+	def time_ago
+		time_ago_in_words(self.created_at)
 	end
 end

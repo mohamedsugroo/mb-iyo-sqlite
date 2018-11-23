@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :advertisments
   get 'errors/page_not_found'
-  get 'home/index'
+  get '/', to: 'home#index'
   root 'home#index'
   resources :sites
   resources :posts

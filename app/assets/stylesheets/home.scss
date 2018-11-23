@@ -1,3 +1,55 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$primary-color: #ff9f43;
+
+.posts_list{
+	margin-bottom: 30px;
+	margin-top: 30px;
+	height: 60px;
+
+	a {
+		text-decoration: none;
+		color: inherit;
+
+		&:hover {
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+
+	.list_item {
+		margin-bottom: 10px;
+		min-height: 200px;		
+	}
+	.post_image {
+		width: 100%;
+		height: 100%;
+		background-color: #f1f1f1;
+		float: left;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+	}
+
+	.title {
+		font-weight: 400;
+		font-size: 1.6rem;
+	}
+
+	.source {
+		background: $primary-color;
+		padding: 6px;
+		border-radius: 3px;
+		color: white;
+	}
+
+}
+
+
+.pagination {
+	padding: 14px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    .previous_page {
+    	    margin: 0 auto;
+    }
+}
