@@ -18,6 +18,10 @@ gem 'httparty'
 gem 'will_paginate'
 gem 'sanitize'
 
+gem 'whenever', require: false
+gem 'devise'
+
+
 gem 'paperclip', '~> 6.1'
 
 gem 'bootsnap', '>= 1.1.0', require: false

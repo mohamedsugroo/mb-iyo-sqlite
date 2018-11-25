@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :advertisments
   get 'errors/page_not_found'
   get '/', to: 'home#index'
