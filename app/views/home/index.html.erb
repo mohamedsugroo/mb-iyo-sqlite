@@ -21,42 +21,43 @@
 	</div>
 </div>
 
-
-<div class="container">
-	<div class="row">
-		<div class="col">
-			<div class="posts_list">
-				<% @lists.each do |article| %>
-					<a href="<%= post_path(article)%>">
-						<div class="row list_item">
-							<div class="col">
-								<div class="post_image" style="background-image: url(<%= article.featuredmedia  %>)">
-								</div>
-							</div>
-							<div class="col">
-								<h2 class="title"><%= article.title.html_safe %></h2>
-								<div class="source">
-									<div class="avatar" style="background-image: url(<%= article.new_author_avatars[0] %>)">
+<div class="content_home">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="posts_list">
+					<% @lists.each do |article| %>
+						<a href="<%= post_path(article)%>">
+							<div class="row list_item">
+								<div class="col">
+									<div class="post_image" style="background-image: url(<%= article.featuredmedia  %>)">
 									</div>
-									<label class="author">
-										<%= article.author %>
-									</label>
 								</div>
-								<%#= article.time_ago %>
+								<div class="col">
+									<h2 class="title"><%= article.title.html_safe %></h2>
+									<div class="source">
+										<div class="avatar" style="background-image: url(<%= article.new_author_avatars[0] %>)">
+										</div>
+										<label class="author">
+											<%= article.author %>
+										</label>
+									</div>
+									<%#= article.time_ago %>
+								</div>
+								
 							</div>
-							
-						</div>
-					</a>
-				<% end %>
-				<%= will_paginate @lists, :page_links => false %>
+						</a>
+					<% end %>
+					<%= will_paginate @lists, :page_links => false %>
 
+				</div>
+			</div>
+			<div class="col-md-4">
+				 <%= render 'advertisments/random_advert' %>
 			</div>
 		</div>
-		<div class="col-md-4">
-			 <%= render 'advertisments/random_advert' %>
-		</div>
+
+
+		
 	</div>
-
-
-	
 </div>

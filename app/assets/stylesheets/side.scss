@@ -1,0 +1,50 @@
+aside.sidemenu {
+	width: 300px;
+	height: 100%;
+	position: fixed;
+	background: white;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	border-right: 1px solid #f1f1f1;
+	left: -500px;
+
+	.footer {
+		background: #f1f1f1;
+		min-height: 400px;
+		width: 100%;
+	}
+
+	.main {
+		min-height: 500px;
+	}
+
+	.top_fixed {
+		border-bottom: 1px solid #f1f1f1;
+		background: #f1f1f1;
+
+		a {
+			text-decoration: none;
+			color: inherit;
+
+			&:hover {
+				text-decoration: none;
+				color: inherit;
+			}
+		}
+
+		.btn-bars {
+			background: none;
+			border: none;
+			padding: 13px;
+			font-size: 1.2rem;
+			padding-left: 20px;
+			padding-right: 20px;
+			cursor: pointer;
+			margin-right: 20px;
+		}
+	}
+}
+
+
+
