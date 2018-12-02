@@ -187,21 +187,30 @@ article {
 				font-size: 1.9rem;
 			}
 
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+
 			.reddit-color {
 				color: $reddit;
 				padding: 12px;
+				font-weight: 600;
 			}
 			.google-color {
 				color: $google;
 				padding: 12px;
+				font-weight: 600;
 			}
 			.twitter-color {
 				color: $twitter;
 				padding: 12px;
+				font-weight: 600;
 			}
 			.facebook-color {
 				color: $facebook;
 				padding: 12px;
+				font-weight: 600;
 			}
 		}
 	}

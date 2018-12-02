@@ -17,22 +17,30 @@
 		<div class="col align-right">
 			<div class="share">
 				<div class="row">
-					<div class="col align-center facebook-color">
-						<i class="fab fa-facebook-f"></i>  <br>
-						<small>Facebook</small>
-					</div>
-					<div class="col align-center google-color">
-						<i class="fab fa-google-plus-g"></i> <br> 
-						<small>Google</small>
-					</div>
-					<div class="col align-center twitter-color">
-						<i class="fab fa-twitter"></i> <br> 
-						<small>Twitter</small>
-					</div>
-					<div class="col align-center reddit-color">
-						<i class="fab fa-reddit-alien"></i> <br> 
-						<small>Reddit</small>
-					</div>
+					<a href="https://www.facebook.com/sharer/sharer.php?u=<%= post_url(@post)%>">
+						<div class="col align-center facebook-color">
+							<i class="fab fa-facebook-f"></i>  <br>
+							<small>Facebook</small>
+						</div>
+					</a>
+					<a href="https://plus.google.com/share?url=<%= post_url(@post)%>&title=<%= @post.title%>">
+						<div class="col align-center google-color">
+							<i class="fab fa-google-plus-g"></i> <br> 
+							<small>Google</small>
+						</div>
+					</a>
+					<a href="https://twitter.com/home?status=<%= post_url(@post)%>">
+						<div class="col align-center twitter-color">
+							<i class="fab fa-twitter"></i> <br> 
+							<small>Twitter</small>
+						</div>
+					</a>
+					<a href="http://www.reddit.com/submit?url=<%= post_url(@post)%>&title=<%= @post.title%>">
+						<div class="col align-center reddit-color">
+							<i class="fab fa-reddit-alien"></i> <br> 
+							<small>Reddit</small>
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>

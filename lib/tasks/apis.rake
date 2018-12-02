@@ -110,7 +110,7 @@ namespace :blogs do
             photo = featuredImage.parsed_response["guid"]["rendered"] rescue ""
             # puts categories
             
-            Post.create!(
+            Post.create(
                 title: title, 
                 content: newContent,
                 site_id: site.id,

@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
 	include ActionView::Helpers::DateHelper
+
 	def new_tags 
 		JSON.parse(self.tags)
 	end
@@ -25,4 +26,16 @@ class Post < ApplicationRecord
 	def time_ago
 		time_ago_in_words(self.created_at)
 	end
+
+
+
+	private
+
+	  def generate_slug
+	    if self.slug.present? && self.slug == title.parameterize
+	      self.slug
+	    else
+	      self.slug = title.parameterize
+	    end
+	  end
 end

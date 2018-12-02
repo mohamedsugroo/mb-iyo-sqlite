@@ -20,11 +20,17 @@ gem 'sanitize'
 
 gem 'whenever', require: false
 gem 'devise'
+gem 'friendly_id', '~> 5.2.4'
 
 
 gem 'paperclip', '~> 6.1'
 
 gem 'bootsnap', '>= 1.1.0', require: false
+
+
+gem 'webpacker', '~> 3.5'
+
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

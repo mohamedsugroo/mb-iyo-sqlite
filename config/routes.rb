@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :searches, path: 'search'
   devise_for :users
   resources :advertisments
   get 'errors/page_not_found'

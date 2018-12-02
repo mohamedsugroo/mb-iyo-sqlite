@@ -16,14 +16,26 @@
 								<h3 class="title"><%= post.title.html_safe %> </h3>
 								<p>
 									<strong>
-								<%= post.category %>
-
 										<%= post.sites.name %>
-									</strong> <br>
-									<small class="date">
-										<%= post.created_at.strftime("%d %B %Y") %>
-									</small>
+									</strong>
+									
 								</p>
+								</div>
+
+								<div>
+									<hr>
+									<div class="row">
+										<div class="col align-right">
+											<span class="cat">
+											<%= post.catagories.last %> 
+											</span>
+										</div>
+										<div class="col-md-8 align-left">
+											<small class="date">
+												<%= post.created_at.strftime("%d %B %Y") %>
+											</small>
+										</div>
+									</div>
 								</div>
 							</a>
 						</div>

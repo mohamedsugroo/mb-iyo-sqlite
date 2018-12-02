@@ -1,4 +1,9 @@
 <div class="container">
+<%= form_tag(searches_path, method: :get) do %>
+  <%= text_field_tag :term %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
 <h3>Posts</h3> <br>
 <table class="table">
   <thead class="thead-light">

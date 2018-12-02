@@ -1,7 +1,16 @@
+<div class="advertisment_space" id="advertisment_box">
 <% randadvert.each do |ad| %>
 	<div class="advertisment">
-		<%= ad.title %>
+		<%= ad.code_html.html_safe %>
+		<style>
+			<%= ad.code_css %>	
+		</style>
+	  <!-- <script type="text/javascript"> -->
+	    <%= extraCode = ad.code_js %>
 	    <%- advertisment ad.code_js.html_safe %>
-	    <%- advertisment ad.code_html.html_safe %>
+	  <!-- </script> -->
 	</div>
 <% end %>
+</div>
+
+

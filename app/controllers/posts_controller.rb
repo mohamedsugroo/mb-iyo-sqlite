@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 
   def show
     @relatedposts = Post.where("tags LIKE ? OR category LIKE ?","%#{@post.tags}%", "%#{@post.category}%").where('id != ?', @post.id).limit(4)
-    @relatedpostsfix = Post.order("RANDOM()").where('id != ?', @post.id).limit(4)
+    @relatedpostsfix = Post.order("RANDOM()").where('id != ?', @post.id).limit(3)
   end
 
   def new
@@ -58,6 +58,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :content, :site_id, :featuredmedia, :author_name, :author_avatar, :tags, :author, :author_avatars, :source_link, :post_type, :category)
+      params.require(:post).permit(:title, :content, :site_id, :featuredmedia, :author_name, :author_avatar, :tags, :author, :author_avatars, :source_link, :post_type, :category, :slug)
     end
 end
